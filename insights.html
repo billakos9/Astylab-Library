@@ -49,11 +49,12 @@
   <script>
     function tagHTML(tags){ return (tags||[]).map(t => `<span class="tag">${t}</span>`).join(''); }
     function card(i){
+      const insightLink = i.id ? `/insight.html?id=${i.id}` : (i.link || '/data.html');
       return `
-        <section class="card half">
-          <h3>${i.title}</h3>
+        <section class="card half" style="cursor:pointer;" onclick="window.location.href='${insightLink}'">
+          <h3><a href="${insightLink}" style="color:inherit;text-decoration:none;">${i.title}</a></h3>
           <div>${tagHTML(i.tags)}</div>
-          <p><a href="${i.link || '/data.html'}">Related sources →</a></p>
+          <p><a href="${insightLink}">View analysis →</a></p>
         </section>
       `;
     }

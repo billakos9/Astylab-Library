@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Astylab Library — Insight</title>
+  <link rel="stylesheet" href="/assets/styles.css"/>
+</head>
+<body>
+  <div class="container headerpad">
+    <nav class="nav">
+      <div class="logo"><span class="badge">Astylab</span><span>Library</span></div>
+      <div class="links">
+        <a href="/index.html">Home</a>
+        <a href="/sdgs.html">Browse SDGs</a>
+        <a href="/insights.html">Insights</a>
+        <a href="/data.html">Data Sources</a>
+        <a href="/about.html">About</a>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container hero">
+    <p><a href="/insights.html">← Back to all Insights</a></p>
+    <div id="insightContent">
+      <p class="kicker">Loading insight...</p>
+    </div>
+  </div>
+
+  <script src="/assets/insights-data.js"></script>
+  <script>
+    // Get insight ID from URL parameter
+    const params = new URLSearchParams(window.location.search);
+    const insightId = params.get('id') || window.location.hash.substring(1);
+    
+    // Get sources data (could be loaded from data.html or kept separate)
+    const sources = [
+      { title:"Income distribution database", org:"OECD", type:"Dataset & Charts", region:"EU", sdg:"SDG 1", link:"https://data-explorer.oecd.org/vis?tm=DF_IDD&pg=0&snb=1&vw=sr&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_WISE_IDD%40DF_IDD&df[ag]=OECD.WISE.INE&df[vs]=&pd=2010%2C&dq=.A.INC_DISP_GINI..._T.METH2012.D_CUR.&ly[rw]=REF_AREA%2CUNIT_MEASURE&ly[cl]=TIME_PERIOD&to[TIME_PERIOD]=false" },
+      { title:"Open SDG data hub", org:"UN", type:"Dataset", region:"World", sdg:"All", link:"https://unstats-undesa.opendata.arcgis.com/" },
+      { title:"Greece SDG report", org:"UN", type:"Dataset & Reports", region:"Greece", sdg:"All", link:"https://unstats.un.org/sdgs/dataportal/countryprofiles/GRC#goal-2" },
+      { title:"Eurostat Database", org:"Eurostat", type:"Dataset", region:"EU", sdg:"All", link:"https://ec.europa.eu/eurostat/web/main/data/database" },
+      { title:"Data for Greece", org:"World Bank", type:"Report", region:"Greece", sdg:"All", link:"https://data.worldbank.org/country/greece" },
+      { title:"Data for Greece", org:"UN", type:"Dataset", region:"Greece", sdg:"All", link:"https://data.un.org/en/iso/gr.html" },
+      { title:"Greece 2024 report", org:"OECD", type:"Report", region:"Greece", sdg:"All", link:"https://www.oecd.org/en/publications/oecd-economic-surveys-greece-2024_a35a56b6-en/full-report.html" },
+      { title:"Proportion of seats held by women in national parliaments (percent of total number of seats)", org:"UN", type:"Dataset", region:"EU", sdg:"Indic 5.5.1", link:"https://docs.google.com/spreadsheets/d/1LotXuJ3OzZ8DJYT2AecAls1i4Tkl64-m/edit?gid=1293729958#gid=1293729958" },
+      { title:"Greece in figures", org:"UNECE", type:"Report", region:"Greece", sdg:"SDG 5", link:"https://w3.unece.org/CountriesInFigures/en/Home/Index?countryCode=300" },
+      { title:"Proportion of urban population living in slums (percent)", org:"UN", type:"Dataset", region:"EU", sdg:"Indic 11.1.1", link:"https://docs.google.com/spreadsheets/d/1nrDA2piHnZhcLKRgUJDXBERnEShomKSD/edit?gid=539725450#gid=539725450" },
+      { title:"Greenhouse Gases", org:"EEA", type:"Dataset & Charts", region:"EU", sdg:"SDG 13", link:"https://www.eea.europa.eu/en/analysis/maps-and-charts/greenhouse-gases-viewer-data-viewers" }
+    ];
+
+    function findSourceByLink(link) {
+      return sources.find(s => s.link === link) || null;
+    }
+
+    function tagHTML(tags){ 
+      return (tags||[]).map(t => `<span class="tag">${t}</span>`).join(''); 
+    }
+
+    function sdgName(num) {
+      const names = {
+        1: "No Poverty", 2: "Zero Hunger", 3: "Good Health and Well-being",
+        4: "Quality Education", 5: "Gender Equality", 6: "Clean Water and Sanitation",
+        7: "Affordable and Clean Energy", 8: "Decent Work and Economic Growth",
+        9: "Industry, Innovation and Infrastructure", 10: "Reduced Inequalities",
+        11: "Sustainable Cities and Communities", 12: "Responsible Consumption and Production",
+        13: "Climate Action", 14: "Life Below Water", 15: "Life on Land",
+        16: "Peace, Justice and Strong Institutions", 17: "Partnerships for the Goals"
+      };
+      return names[num] || `SDG ${num}`;
+    }
+
+    function renderInsight(insight) {
+      const content = document.getElementById('insightContent');
+      if (!insight) {
+        content.innerHTML = '<p class="kicker">Insight not found.</p><p><a href="/insights.html">← Back to Insights</a></p>';
+        return;
+      }
+
+      // Get SDGs with names
+      const sdgsHTML = insight.sdgs && insight.sdgs.length > 0
+        ? insight.sdgs.map(sdg => `
+            <a href="/sdgs.html" class="tag" style="background: linear-gradient(90deg,var(--accent),var(--accent-2)); color:#000; font-weight:600;">
+              SDG ${sdg}: ${sdgName(sdg)}
+            </a>
+          `).join('')
+        : '<span class="kicker">No SDGs assigned</span>';
+
+      // Process sources
+      const sourcesHTML = insight.sources && insight.sources.length > 0
+        ? insight.sources.map(link => {
+            const source = findSourceByLink(link);
+            if (source) {
+              return `
+                <section class="card" style="margin-bottom:16px;">
+                  <h4 style="margin-top:0;">${source.title}</h4>
+                  <p class="kicker">${source.org} • ${source.type} • ${source.region}</p>
+                  <p><a href="${source.link}" target="_blank" rel="noopener">Open Source →</a></p>
+                </section>
+              `;
+            } else {
+              return `
+                <section class="card" style="margin-bottom:16px;">
+                  <p><a href="${link}" target="_blank" rel="noopener">${link}</a></p>
+                </section>
+              `;
+            }
+          }).join('')
+        : '<p class="kicker">No sources available</p>';
+
+      // Process companies
+      const companiesHTML = insight.companies && insight.companies.length > 0
+        ? insight.companies.map(company => `
+            <section class="card" style="margin-bottom:12px;">
+              <h4 style="margin-top:0;">💡 ${company}</h4>
+            </section>
+          `).join('')
+        : '<p class="kicker">No company ideas available</p>';
+
+      content.innerHTML = `
+        <p class="kicker">Insight</p>
+        <h1>${insight.title}</h1>
+        <div style="margin: 16px 0;">${tagHTML(insight.tags)}</div>
+        <div style="margin: 24px 0 32px;">
+          ${sdgsHTML}
+        </div>
+
+        <div class="grid" style="margin-top: 32px;">
+          <section class="card">
+            <h2 style="margin-top:0;">📊 Related Sources</h2>
+            ${sourcesHTML}
+            <p style="margin-top: 16px;"><a href="/data.html">View all data sources →</a></p>
+          </section>
+
+          <section class="card">
+            <h2 style="margin-top:0;">🚀 Company Ideas</h2>
+            <p class="kicker" style="margin-bottom:16px;">Potential business opportunities based on this insight</p>
+            ${companiesHTML}
+          </section>
+        </div>
+      `;
+    }
+
+    // Load and render insight
+    if (typeof INSIGHTS !== 'undefined' && insightId) {
+      const insight = INSIGHTS.find(i => i.id === insightId);
+      renderInsight(insight);
+      document.title = `${insight ? insight.title : 'Insight'} — Astylab Library`;
+    } else {
+      document.getElementById('insightContent').innerHTML = 
+        '<p class="kicker">No insight ID provided.</p><p><a href="/insights.html">← Back to Insights</a></p>';
+    }
+  </script>
+
+  <div class="container footer">© Astylab 2025</div>
+</body></html>
+
