@@ -47,4 +47,34 @@ render(insights);
   <div class="container footer">
     © Astylab 2025 • Built as a lightweight static site. Deploy anywhere.
   </div>
+
+<script src="/assets/insights-data.js"></script>
+<script>
+  function tagHTML(tags){ return (tags||[]).map(t => `<span class="tag">${t}</span>`).join(''); }
+  function card(i){
+    return `
+      <section class="card half">
+        <h3>${i.title}</h3>
+        <div>${tagHTML(i.tags)}</div>
+        <p><a href="${i.link || '/data.html'}">Related sources →</a></p>
+      </section>
+    `;
+  }
+  function render(list){
+    const grid = document.getElementById('insightGrid');
+    if (!list.length){ grid.innerHTML = '<p class="kicker">No insights yet.</p>'; return; }
+    grid.innerHTML = list.map(card).join('');
+  }
+  function applyFilters(){
+    const q = (document.getElementById('insightSearch')?.value || '').toLowerCase();
+    const sdg = document.getElementById('sdgFilter')?.value || '';
+    let list = (typeof INSIGHTS !== 'undefined' ? INSIGHTS : []);
+    if (sdg) list = list.filter(i => String(i.sdg) === sdg);
+    if (q) list = list.filter(i => (i.title + ' ' + (i.tags||[]).join(' ')).toLowerCase().includes(q));
+    render(list);
+  }
+  // initial render
+  applyFilters();
+</script>
+
 </body></html>
