@@ -69,7 +69,14 @@
       const q = (document.getElementById('insightSearch').value || '').toLowerCase();
       const sdg = document.getElementById('sdgFilter').value;
       let list = (typeof INSIGHTS !== 'undefined' ? INSIGHTS : []);
-      if (sdg) list = list.filter(i => String(i.sdg) === sdg);
+      if (sdg) {
+        list = list.filter(i => {
+          const sdgs = Array.isArray(i.sdgs)
+            ? i.sdgs
+            : (typeof i.sdg !== 'undefined' ? [i.sdg] : []); // backward compatibility
+          return sdgs.map(String).includes(sdg);
+        });
+      }
       if (q) list = list.filter(i => (i.title + ' ' + (i.tags||[]).join(' ')).toLowerCase().includes(q));
       render(list);
     }
