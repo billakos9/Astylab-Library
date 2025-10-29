@@ -36,7 +36,7 @@ function render(list){
   grid.innerHTML=list.map(i=>{
     const insightLink = i.id ? `/insight.html?id=${i.id}` : (i.link || '/data.html');
     return `
-    <section class="card" style="cursor:pointer;" onclick="window.location.href='${insightLink}'">
+    <section class="card">
       <h3><a href="${insightLink}" style="color:inherit;text-decoration:none;">${i.title}</a></h3>
       <div>${tagHTML(i.tags)}</div>
       <p><a href="${insightLink}">View analysis →</a></p>
