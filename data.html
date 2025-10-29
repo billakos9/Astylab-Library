@@ -23,27 +23,50 @@
 </div>
 <div class="container card">
   <table class="table" id="dataTable">
-    <thead><tr><th>Title</th><th>Type</th><th>Region</th><th>SDG / Indicator</th><th>Link</th></tr></thead>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Type</th>
+        <th>Org</th>
+        <th>Region</th>
+        <th>SDG / Indicator</th>
+        <th>Link</th>
+      </tr></thead>
     <tbody id="dataBody"></tbody>
   </table>
 </div>
+
 <script>
-const sources=[
- {title:"Income distribution database", org:"OECD", type:"Study", region:"Europe", sdg:"SDG 1",link:"https://data-explorer.oecd.org/vis?tm=DF_IDD&pg=0&snb=1&vw=sr&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_WISE_IDD%40DF_IDD&df[ag]=OECD.WISE.INE&df[vs]=&pd=2010%2C&dq=.A.INC_DISP_GINI..._T.METH2012.D_CUR.&ly[rw]=REF_AREA%2CUNIT_MEASURE&ly[cl]=TIME_PERIOD&to[TIME_PERIOD]=false"},
- {title:"EU-SILC 2021: Social isolation metrics",type:"Dataset",region:"EU",sdg:"SDG 3",link:"https://ec.europa.eu/"}
+const sources = [
+  { title:"EU-SILC 2021: Social isolation metrics", org:"Eurostat", type:"Dataset", region:"EU", sdg:"SDG 3", link:"https://ec.europa.eu/" }
 ];
-const body=document.getElementById('dataBody');
+
+const body = document.getElementById('dataBody');
+
 function render(list){
-  body.innerHTML=list.map(s=>`
+  body.innerHTML = list.map(s => `
     <tr>
-      <td>${s.title}</td><td>${s.type}</td><td>${s.region}</td><td>${s.sdg}</td>
+      <td>${s.title}</td>
+      <td>${s.type}</td>
+      <td>${s.org || ''}</td>   <!-- NEW -->
+      <td>${s.region}</td>
+      <td>${s.sdg}</td>
       <td><a href="${s.link}" target="_blank" rel="noopener">Open</a></td>
-    </tr>`).join('');
+    </tr>
+  `).join('');
 }
+
 function filterData(){
-  const q=document.getElementById('dataSearch').value.toLowerCase();
-  render(sources.filter(s=>(s.title+' '+s.type+' '+s.region+' '+s.sdg).toLowerCase().includes(q)));
+  const q = document.getElementById('dataSearch').value.toLowerCase();
+  render(
+    sources.filter(s =>
+      (s.title + ' ' + s.type + ' ' + (s.org || '') + ' ' + s.region + ' ' + s.sdg)
+        .toLowerCase()
+        .includes(q)
+    )
+  );
 }
+
 render(sources);
 </script>
 
