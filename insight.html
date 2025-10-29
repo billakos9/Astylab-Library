@@ -19,6 +19,101 @@
     </nav>
   </div>
 
+  <div class="container" id="content"></div>
+
+  <script src="/assets/insights-data.js"></script>
+  <script>
+    const SDGS_META = [
+      null,
+      {num:1,slug:"no-poverty",title:"No Poverty"},
+      {num:2,slug:"zero-hunger",title:"Zero Hunger"},
+      {num:3,slug:"good-health",title:"Good Health and Well-being"},
+      {num:4,slug:"quality-education",title:"Quality Education"},
+      {num:5,slug:"gender-equality",title:"Gender Equality"},
+      {num:6,slug:"clean-water",title:"Clean Water and Sanitation"},
+      {num:7,slug:"affordable-energy",title:"Affordable and Clean Energy"},
+      {num:8,slug:"decent-work",title:"Decent Work and Economic Growth"},
+      {num:9,slug:"industry-innovation",title:"Industry, Innovation and Infrastructure"},
+      {num:10,slug:"reduced-inequalities",title:"Reduced Inequalities"},
+      {num:11,slug:"sustainable-cities",title:"Sustainable Cities and Communities"},
+      {num:12,slug:"responsible-consumption",title:"Responsible Consumption and Production"},
+      {num:13,slug:"climate-action",title:"Climate Action"},
+      {num:14,slug:"life-below-water",title:"Life Below Water"},
+      {num:15,slug:"life-on-land",title:"Life on Land"},
+      {num:16,slug:"peace-justice",title:"Peace, Justice and Strong Institutions"},
+      {num:17,slug:"partnerships",title:"Partnerships for the Goals"}
+    ];
+    function getParam(name){ return new URLSearchParams(location.search).get(name); }
+    function tagHTML(tags){ return (tags||[]).map(t => `<span class="tag">${t}</span>`).join(''); }
+    function sdgChips(sdgs){
+      const arr = Array.isArray(sdgs) ? sdgs : (typeof sdgs === 'number' ? [sdgs] : []);
+      return arr.map(n => {
+        const meta = SDGS_META[n];
+        if (!meta) return '';
+        return `<a class="tag" href="/sdgs/${meta.slug}/">SDG ${meta.num}</a>`;
+      }).join(' ');
+    }
+    function sourceList(links){
+      const arr = Array.isArray(links) ? links : [];
+      if (!arr.length) return '';
+      return `<ul>` + arr.map(u => `<li><a href="${u}" target="_blank" rel="noopener">${u}</a></li>`).join('') + `</ul>`;
+    }
+    (function render(){
+      const id = getParam('id');
+      const container = document.getElementById('content');
+      const list = (typeof INSIGHTS !== 'undefined' ? INSIGHTS : []);
+      const insight = list.find(i => i.id === id);
+      if (!id || !insight){
+        container.innerHTML = `<div class="hero"><p class="kicker">Insight</p><h1>Not found</h1><p><a href="/insights.html">← Back to insights</a></p></div>`;
+        return;
+      }
+      container.innerHTML = `
+        <div class="hero">
+          <p class="kicker">Insight</p>
+          <h1>${insight.title}</h1>
+          <p>${sdgChips(insight.sdgs || insight.sdg)}</p>
+          <p><a href="/insights.html">← Back to insights</a></p>
+        </div>
+        <div class="grid">
+          <section class="card">
+            ${insight.excerpt ? `<p>${insight.excerpt}</p>` : ''}
+            ${tagHTML(insight.tags)}
+          </section>
+          <section class="card">
+            <h3>Related sources</h3>
+            ${insight.link ? `<p><a href="${insight.link}" target="_blank" rel="noopener">Primary source ↗</a></p>` : ''}
+            ${sourceList(insight.sources)}
+            <p><a href="/data.html">Browse all data sources →</a></p>
+          </section>
+        </div>
+      `;
+    })();
+  </script>
+
+  <div class="container footer">© Astylab 2025</div>
+</body></html>
+
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Astylab Library — Insight</title>
+  <link rel="stylesheet" href="/assets/styles.css"/>
+</head>
+<body>
+  <div class="container headerpad">
+    <nav class="nav">
+      <div class="logo"><span class="badge">Astylab</span><span>Library</span></div>
+      <div class="links">
+        <a href="/index.html">Home</a>
+        <a href="/sdgs.html">Browse SDGs</a>
+        <a href="/insights.html">Insights</a>
+        <a href="/data.html">Data Sources</a>
+        <a href="/about.html">About</a>
+      </div>
+    </nav>
+  </div>
+
   <div class="container hero">
     <p><a href="/insights.html">← Back to all Insights</a></p>
     <div id="insightContent">

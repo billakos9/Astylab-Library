@@ -33,16 +33,22 @@ function tagHTML(tags){return (tags||[]).map(t=>`<span class="tag">${t}</span>`)
 function render(list){
   const grid=document.getElementById('insightGrid');
   if(!list.length){ grid.innerHTML = '<p class="kicker">No insights yet for this SDG. Add some in assets/insights-data.js (set sdg: 15).</p>'; return; }
-  grid.innerHTML=list.map(i=>`
-    <section class="card">
-      <h3>${i.title}</h3>
+  grid.innerHTML=list.map(i=>{
+    const insightLink = i.id ? `/insight.html?id=${i.id}` : (i.link || '/data.html');
+    return `
+    <section class="card" style="cursor:pointer;" onclick="window.location.href='${insightLink}'">
+      <h3><a href="${insightLink}" style="color:inherit;text-decoration:none;">${i.title}</a></h3>
       <div>${tagHTML(i.tags)}</div>
-      <p><a href="${i.link||'/data.html'}">Related sources →</a></p>
-    </section>`).join('');
+      <p><a href="${insightLink}">View analysis →</a></p>
+    </section>`;
+  }).join('');
 }
 function filterInsights(){
   const q=document.getElementById('insightSearch').value.toLowerCase();
-  const filtered = INSIGHTS.filter(i => i.sdg=== 15 && (i.title + ' ' + (i.tags||[]).join(' ')).toLowerCase().includes(q));
+  const filtered = INSIGHTS.filter(i => {
+    const sdgs = Array.isArray(i.sdgs) ? i.sdgs : (typeof i.sdg !== 'undefined' ? [i.sdg] : []);
+    return sdgs.includes(15) && (i.title + ' ' + (i.tags||[]).join(' ')).toLowerCase().includes(q);
+  });
   render(filtered);
 }
 filterInsights();
