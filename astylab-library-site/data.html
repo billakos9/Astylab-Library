@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Astylab Library</title>
+<meta name="description" content="Astylab Library — a clean, publishable knowledge base with SDGs, Indicators, Insights, and Data Sources."/>
+<link rel="stylesheet" href="assets/styles.css"/></head>
+<body><div class="container headerpad"><nav class="nav">
+  <div class="logo"><span class="badge">Astylab</span><span>Library</span></div>
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="sdgs.html">Browse SDGs</a>
+    <a href="insights.html">Insights</a>
+    <a href="data.html">Data Sources</a>
+    <a href="about.html">About</a>
+  </div>
+</nav></div>
+
+<div class="container hero">
+  <p class="kicker">Data</p>
+  <h1>Data Sources & References</h1>
+  <p>Replace the sample rows below with your datasets, papers, and reports.</p>
+  <input class="input" id="dataSearch" placeholder="Search data sources..." oninput="filterData()" />
+</div>
+<div class="container card">
+  <table class="table" id="dataTable">
+    <thead><tr><th>Title</th><th>Type</th><th>Region</th><th>SDG / Indicator</th><th>Link</th></tr></thead>
+    <tbody id="dataBody"></tbody>
+  </table>
+</div>
+<script>
+const sources=[
+ {title:"WHO 2023 Mental Health Report",type:"Study",region:"Europe",sdg:"SDG 3 (3.4.2)",link:"https://www.who.int/"},
+ {title:"EU-SILC 2021: Social isolation metrics",type:"Dataset",region:"EU",sdg:"SDG 3",link:"https://ec.europa.eu/"}
+];
+const body=document.getElementById('dataBody');
+function render(list){
+  body.innerHTML=list.map(s=>`
+    <tr>
+      <td>${s.title}</td><td>${s.type}</td><td>${s.region}</td><td>${s.sdg}</td>
+      <td><a href="${s.link}" target="_blank" rel="noopener">Open</a></td>
+    </tr>`).join('');
+}
+function filterData(){
+  const q=document.getElementById('dataSearch').value.toLowerCase();
+  render(sources.filter(s=>(s.title+' '+s.type+' '+s.region+' '+s.sdg).toLowerCase().includes(q)));
+}
+render(sources);
+</script>
+
+  <div class="container footer">
+    © Astylab 2025 • Built as a lightweight static site. Deploy anywhere.
+  </div>
+</body></html>

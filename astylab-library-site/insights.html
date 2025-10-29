@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Astylab Library</title>
+<meta name="description" content="Astylab Library — a clean, publishable knowledge base with SDGs, Indicators, Insights, and Data Sources."/>
+<link rel="stylesheet" href="assets/styles.css"/></head>
+<body><div class="container headerpad"><nav class="nav">
+  <div class="logo"><span class="badge">Astylab</span><span>Library</span></div>
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="sdgs.html">Browse SDGs</a>
+    <a href="insights.html">Insights</a>
+    <a href="data.html">Data Sources</a>
+    <a href="about.html">About</a>
+  </div>
+</nav></div>
+
+<div class="container hero">
+  <p class="kicker">Insights</p>
+  <h1>Curated findings</h1>
+  <p>Add your conclusions as cards. Link to the data sources you used.</p>
+  <input class="input" id="insightSearch" placeholder="Search insights..." oninput="filterInsights()" />
+</div>
+<div class="container grid" id="insightGrid"></div>
+<script>
+const insights=[
+ {title:"Loneliness rises with urban density among elders in Athens",tags:["Greece","Aging","SDG 3"],link:"data.html#sources"},
+ {title:"Community programs reduce social isolation by ~20% within 6 months",tags:["Intervention","SDG 3"],link:"data.html#sources"}
+];
+const grid=document.getElementById('insightGrid');
+function tagHTML(tags){return tags.map(t=>`<span class="tag">${t}</span>`).join('')}
+function render(list){
+  grid.innerHTML=list.map(i=>`
+    <section class="card half">
+      <h3>${i.title}</h3>
+      <div>${tagHTML(i.tags)}</div>
+      <p><a href="${i.link}">Related sources →</a></p>
+    </section>`).join('');
+}
+function filterInsights(){
+  const q=document.getElementById('insightSearch').value.toLowerCase();
+  render(insights.filter(i=>(i.title+' '+i.tags.join(' ')).toLowerCase().includes(q)));
+}
+render(insights);
+</script>
+
+  <div class="container footer">
+    © Astylab 2025 • Built as a lightweight static site. Deploy anywhere.
+  </div>
+</body></html>
