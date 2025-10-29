@@ -2,55 +2,59 @@
 <html lang="en"><head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Astylab Library</title>
-<meta name="description" content="Astylab Library — a clean, publishable knowledge base with SDGs, Indicators, Insights, and Data Sources."/>
-<link rel="stylesheet" href="assets/styles.css"/></head>
+<link rel="stylesheet" href="/assets/styles.css"/></head>
 <body><div class="container headerpad"><nav class="nav">
   <div class="logo"><span class="badge">Astylab</span><span>Library</span></div>
   <div class="links">
-    <a href="index.html">Home</a>
-    <a href="sdgs.html">Browse SDGs</a>
-    <a href="insights.html">Insights</a>
-    <a href="data.html">Data Sources</a>
-    <a href="about.html">About</a>
+    <a href="/index.html">Home</a>
+    <a href="/sdgs.html">Browse SDGs</a>
+    <a href="/insights.html">Insights</a>
+    <a href="/data.html">Data Sources</a>
+    <a href="/about.html">About</a>
   </div>
 </nav></div>
 
 <div class="container hero">
   <p class="kicker">SDGs</p>
   <h1>Browse by Sustainable Development Goal</h1>
-  <p>Click a goal to view its description and see related indicators, insights, and data. Edit this file to add your own links.</p>
+  <p>Click a goal to open its page and see insights related to that SDG.</p>
   <input class="input" id="sdgSearch" placeholder="Search SDGs..." oninput="filterSDGs()" />
 </div>
 <div class="container grid" id="sdgGrid"></div>
+
 <script>
 const sdgs=[
- {num:1,title:"No Poverty",desc:"End poverty in all its forms everywhere.",url:"https://sdgs.un.org/goals/goal1"},
- {num:2,title:"Zero Hunger",desc:"End hunger, achieve food security and improved nutrition.",url:"https://sdgs.un.org/goals/goal2"},
- {num:3,title:"Good Health and Well-being",desc:"Ensure healthy lives and promote well-being for all at all ages.",url:"https://sdgs.un.org/goals/goal3"},
- {num:4,title:"Quality Education",desc:"Ensure inclusive and equitable quality education.",url:"https://sdgs.un.org/goals/goal4"},
- {num:5,title:"Gender Equality",desc:"Achieve gender equality and empower all women and girls.",url:"https://sdgs.un.org/goals/goal5"},
- {num:6,title:"Clean Water and Sanitation",desc:"Ensure availability and sustainable management of water and sanitation for all.",url:"https://sdgs.un.org/goals/goal6"},
- {num:7,title:"Affordable and Clean Energy",desc:"Ensure access to affordable, reliable, sustainable and modern energy.",url:"https://sdgs.un.org/goals/goal7"},
- {num:8,title:"Decent Work and Economic Growth",desc:"Promote sustained, inclusive and sustainable economic growth.",url:"https://sdgs.un.org/goals/goal8"},
- {num:9,title:"Industry, Innovation and Infrastructure",desc:"Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation.",url:"https://sdgs.un.org/goals/goal9"},
- {num:10,title:"Reduced Inequalities",desc:"Reduce inequality within and among countries.",url:"https://sdgs.un.org/goals/goal10"},
- {num:11,title:"Sustainable Cities and Communities",desc:"Make cities and human settlements inclusive, safe, resilient and sustainable.",url:"https://sdgs.un.org/goals/goal11"},
- {num:12,title:"Responsible Consumption and Production",desc:"Ensure sustainable consumption and production patterns.",url:"https://sdgs.un.org/goals/goal12"},
- {num:13,title:"Climate Action",desc:"Take urgent action to combat climate change and its impacts.",url:"https://sdgs.un.org/goals/goal13"},
- {num:14,title:"Life Below Water",desc:"Conserve and sustainably use oceans, seas and marine resources.",url:"https://sdgs.un.org/goals/goal14"},
- {num:15,title:"Life on Land",desc:"Protect, restore and promote sustainable use of terrestrial ecosystems.",url:"https://sdgs.un.org/goals/goal15"},
- {num:16,title:"Peace, Justice and Strong Institutions",desc:"Promote peaceful and inclusive societies, provide access to justice, and build effective institutions.",url:"https://sdgs.un.org/goals/goal16"},
- {num:17,title:"Partnerships for the Goals",desc:"Strengthen the means of implementation and revitalize global partnerships.",url:"https://sdgs.un.org/goals/goal17"}
+ {num:1,slug:"no-poverty",title:"No Poverty",desc:"End poverty in all its forms everywhere.",url:"https://sdgs.un.org/goals/goal1"},
+ {num:2,slug:"zero-hunger",title:"Zero Hunger",desc:"End hunger, achieve food security and improved nutrition.",url:"https://sdgs.un.org/goals/goal2"},
+ {num:3,slug:"good-health",title:"Good Health and Well-being",desc:"Ensure healthy lives and promote well-being for all at all ages.",url:"https://sdgs.un.org/goals/goal3"},
+ {num:4,slug:"quality-education",title:"Quality Education",desc:"Ensure inclusive and equitable quality education.",url:"https://sdgs.un.org/goals/goal4"},
+ {num:5,slug:"gender-equality",title:"Gender Equality",desc:"Achieve gender equality and empower all women and girls.",url:"https://sdgs.un.org/goals/goal5"},
+ {num:6,slug:"clean-water",title:"Clean Water and Sanitation",desc:"Ensure availability and sustainable management of water and sanitation for all.",url:"https://sdgs.un.org/goals/goal6"},
+ {num:7,slug:"affordable-energy",title:"Affordable and Clean Energy",desc:"Ensure access to affordable, reliable, sustainable and modern energy.",url:"https://sdgs.un.org/goals/goal7"},
+ {num:8,slug:"decent-work",title:"Decent Work and Economic Growth",desc:"Promote sustained, inclusive and sustainable economic growth.",url:"https://sdgs.un.org/goals/goal8"},
+ {num:9,slug:"industry-innovation",title:"Industry, Innovation and Infrastructure",desc:"Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation.",url:"https://sdgs.un.org/goals/goal9"},
+ {num:10,slug:"reduced-inequalities",title:"Reduced Inequalities",desc:"Reduce inequality within and among countries.",url:"https://sdgs.un.org/goals/goal10"},
+ {num:11,slug:"sustainable-cities",title:"Sustainable Cities and Communities",desc:"Make cities and human settlements inclusive, safe, resilient and sustainable.",url:"https://sdgs.un.org/goals/goal11"},
+ {num:12,slug:"responsible-consumption",title:"Responsible Consumption and Production",desc:"Ensure sustainable consumption and production patterns.",url:"https://sdgs.un.org/goals/goal12"},
+ {num:13,slug:"climate-action",title:"Climate Action",desc:"Take urgent action to combat climate change and its impacts.",url:"https://sdgs.un.org/goals/goal13"},
+ {num:14,slug:"life-below-water",title:"Life Below Water",desc:"Conserve and sustainably use oceans, seas and marine resources.",url:"https://sdgs.un.org/goals/goal14"},
+ {num:15,slug:"life-on-land",title:"Life on Land",desc:"Protect, restore and promote sustainable use of terrestrial ecosystems.",url:"https://sdgs.un.org/goals/goal15"},
+ {num:16,slug:"peace-justice",title:"Peace, Justice and Strong Institutions",desc:"Promote peaceful and inclusive societies, provide access to justice, and build effective institutions.",url:"https://sdgs.un.org/goals/goal16"},
+ {num:17,slug:"partnerships",title:"Partnerships for the Goals",desc:"Strengthen the means of implementation and revitalize global partnerships.",url:"https://sdgs.un.org/goals/goal17"}
 ];
 const grid=document.getElementById('sdgGrid');
-function render(list){
-  grid.innerHTML=list.map(g=>`
-    <section class="card half">
-      <h3>${g.num}. ${g.title}</h3>
-      <p>${g.desc}</p>
-      <a href="${g.url}" target="_blank" rel="noopener">UN page →</a>
-    </section>`).join('');
+function card(g){
+  return `
+  <section class="card half">
+    <h3>${g.num}. ${g.title}</h3>
+    <p>${g.desc}</p>
+    <p>
+      <a class="btn" href="/sdgs/${g.slug}/">View insights →</a>
+      &nbsp;&nbsp;<a href="${g.url}" target="_blank" rel="noopener">UN page</a>
+    </p>
+  </section>`;
 }
+function render(list){ grid.innerHTML=list.map(card).join(''); }
 function filterSDGs(){
   const q=document.getElementById('sdgSearch').value.toLowerCase();
   render(sdgs.filter(g=>(g.title+' '+g.desc).toLowerCase().includes(q)||String(g.num).includes(q)));
@@ -58,7 +62,5 @@ function filterSDGs(){
 render(sdgs);
 </script>
 
-  <div class="container footer">
-    © Astylab 2025 • Built as a lightweight static site. Deploy anywhere.
-  </div>
+  <div class="container footer">© Astylab 2025</div>
 </body></html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Astylab Library</title>
+<link rel="stylesheet" href="/assets/styles.css"/></head>
+<body><div class="container headerpad"><nav class="nav">
+  <div class="logo"><span class="badge">Astylab</span><span>Library</span></div>
+  <div class="links">
+    <a href="/index.html">Home</a>
+    <a href="/sdgs.html">Browse SDGs</a>
+    <a href="/insights.html">Insights</a>
+    <a href="/data.html">Data Sources</a>
+    <a href="/about.html">About</a>
+  </div>
+</nav></div>
+
+<div class="container hero">
+  <p class="kicker">SDG 17</p>
+  <h1>Partnerships for the Goals</h1>
+  <p>Strengthen the means of implementation and revitalize global partnerships.</p>
+  <p><a href="/sdgs.html">← Back to all SDGs</a></p>
+</div>
+<div class="container grid">
+  <section class="card">
+    <h3>Insights related to SDG 17</h3>
+    <input class="input" id="insightSearch" placeholder="Search these insights..." oninput="filterInsights()" />
+    <div id="insightGrid" style="margin-top:16px;"></div>
+  </section>
+</div>
+<script src="/assets/insights-data.js"></script>
+<script>
+function tagHTML(tags){return (tags||[]).map(t=>`<span class="tag">${t}</span>`).join('');}
+function render(list){
+  const grid=document.getElementById('insightGrid');
+  if(!list.length){ grid.innerHTML = '<p class="kicker">No insights yet for this SDG. Add some in assets/insights-data.js (set sdg: 17).</p>'; return; }
+  grid.innerHTML=list.map(i=>`
+    <section class="card">
+      <h3>${i.title}</h3>
+      <div>${tagHTML(i.tags)}</div>
+      <p><a href="${i.link||'/data.html'}">Related sources →</a></p>
+    </section>`).join('');
+}
+function filterInsights(){
+  const q=document.getElementById('insightSearch').value.toLowerCase();
+  const filtered = INSIGHTS.filter(i => i.sdg=== 17 && (i.title + ' ' + (i.tags||[]).join(' ')).toLowerCase().includes(q));
+  render(filtered);
+}
+filterInsights();
+</script>
+
+  <div class="container footer">© Astylab 2025</div>
+</body></html>
+
