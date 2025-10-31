@@ -678,4 +678,84 @@ const INSIGHTS = [
       { name: "CitizenLab", url: "https://www.citizenlab.co/", blurb: "Participatory budgeting & mapping for fair siting." }
     ]
   }
+  ,
+  {
+    id: "buurtzorg-self-managed-teams-outcomes",
+    slug: "buurtzorg-self-managed-teams-outcomes",
+    title: "Self-managed neighborhood nursing boosts outcomes & cuts overhead",
+    sdg: 3,
+    sdgs: [3, 8, 10, 11],
+    tags: ["Community Care","Self-management","Netherlands"],
+    excerpt: "Nurse-led, neighborhood teams deliver ~30% higher client satisfaction, with absenteeism, overhead, required hours per client, and turnover about 1/3–2/3 lower than peers.",
+    link: "https://www.buurtzorg.com/wp-content/uploads/2022/11/Buurtzorg-Case-Final.pdf",
+    sources: [
+      "https://www.buurtzorg.com/wp-content/uploads/2022/11/Buurtzorg-Case-Final.pdf",
+      "https://www.buurtzorg.com/about-us/history/",
+      "https://www.commonwealthfund.org/publications/case-study/2015/may/home-care-self-governing-nursing-teams-netherlands-buurtzorg-model"
+    ],
+    companies: [
+      { name: "Buurtzorg Nederland", url: "https://www.buurtzorg.com/", blurb: "Original nonprofit model of self-managing neighborhood nursing teams." },
+      { name: "Buurtzorg Britain & Ireland", url: "https://enliveningedge.org/organizations/buurtzorg-uk-ireland-transforming-national-health-service-resources-scarce-part-1-shifting-mindsets/", blurb: "Adaptations and pilots of the Buurtzorg approach in the UK & Ireland." },
+      { name: "Neighbourhood District Nursing (Wales Pilot)", url: "https://pure.southwales.ac.uk/files/30470124/FINAL_NN_Report_201122_002_x0tL0Cs.pdf", blurb: "Government-funded pilot testing Buurtzorg-style district nursing teams." }
+    ]
+  },
+  {
+    id: "buurtzorg-scaling-without-middle-managers",
+    slug: "buurtzorg-scaling-without-middle-managers",
+    title: "Scaling care with 900 self-managing teams—and no middle managers",
+    sdg: 8,
+    sdgs: [8, 3, 11],
+    tags: ["Org Design","Decentralization","Workforce"],
+    excerpt: "By 2022, >10k nurses worked in ~900 teams supported by ~50 back-office staff and ~22 coaches; teams handle scheduling, hiring & care, spending most time on patient work.",
+    link: "https://www.buurtzorg.com/wp-content/uploads/2022/11/Buurtzorg-Case-Final.pdf",
+    sources: [
+      "https://www.buurtzorg.com/wp-content/uploads/2022/11/Buurtzorg-Case-Final.pdf",
+      "https://www.library.hbs.edu/working-knowledge/this-company-lets-employees-take-charge-buurtzorg",
+      "https://link.springer.com/article/10.1007/s41469-024-00184-y"
+    ],
+    companies: [
+      { name: "Buurtzorg Nederland", url: "https://www.buurtzorg.com/", blurb: "Flat structure with coach network and purpose-built IT (BuurtzorgWeb)." },
+      { name: "Ecare", url: "https://www.ecare.nl/", blurb: "IT partner behind BuurtzorgWeb and Omaha System integration for teams." }
+    ]
+  },
+  {
+    id: "buurtzorg-global-adaptation-evidence",
+    slug: "buurtzorg-global-adaptation-evidence",
+    title: "Buurtzorg model shows positive results beyond the Netherlands",
+    sdg: 3,
+    sdgs: [3, 10, 11],
+    tags: ["Replication","Evidence","UK & EU"],
+    excerpt: "International pilots (UK/Wales and others) report positive patient & caregiver satisfaction and promising cost-effectiveness when adapting Buurtzorg principles.",
+    link: "https://www.sciencedirect.com/science/article/pii/S2666142X22000017",
+    sources: [
+      "https://www.sciencedirect.com/science/article/pii/S2666142X22000017",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6009560/",
+      "https://bmchealthservres.biomedcentral.com/articles/10.1186/s12913-019-4804-8",
+      "https://pure.southwales.ac.uk/files/30470124/FINAL_NN_Report_201122_002_x0tL0Cs.pdf"
+    ],
+    companies: [
+      { name: "Buurtzorg International", url: "https://www.buurtzorg.com/", blurb: "Supporting adaptations of the model in several countries." },
+      { name: "NHS Neighbourhood Nursing (UK pilots)", url: "https://bmchealthservres.biomedcentral.com/articles/10.1186/s12913-019-4804-8", blurb: "Adapting self-managing principles to community nursing contexts." },
+      { name: "Neighbourhood District Nursing (Wales)", url: "https://pure.southwales.ac.uk/files/30470124/FINAL_NN_Report_201122_002_x0tL0Cs.pdf", blurb: "Pilot evaluation of outcomes and implementation lessons." }
+    ]
+  }
+  ,
+  {
+    id: "buffalo-clean-sweep-hotline-trust",
+    slug: "buffalo-clean-sweep-hotline-trust",
+    title: "311/911 activity can signal trust—not deterioration",
+    sdg: 16,
+    sdgs: [16, 11],
+    tags: ["Governance","Trust","Hotline Data","Buffalo","US","311","911"],
+    excerpt: "During Buffalo’s Clean Sweep, participating neighborhoods were 42% more likely to report crime (911) and 9% more likely to request services (311)—reflecting greater trust and perceived responsiveness rather than worsening conditions.",
+    link: "https://cityleadership.harvard.edu/resources/when-residents-report-hidden-insights-in-city-hotline-data/",
+    sources: [
+      "https://cityleadership.harvard.edu/resources/when-residents-report-hidden-insights-in-city-hotline-data/"
+    ],
+    companies: [
+      { name: "CivicPlus (SeeClickFix)", url: "https://www.civicplus.com/seeclickfix", blurb: "Neighborhood reporting & 311 request platform used by hundreds of cities." },
+      { name: "Rock Solid (CitySourced)", url: "https://www.rocksolid.com/", blurb: "Mobile issue reporting and constituent experience suite for 311/CRM." },
+      { name: "QScend 311 CRM", url: "https://www.qscend.com/", blurb: "Citizen request management platform powering 311 services in US municipalities." }
+    ]
+  }
 ];
