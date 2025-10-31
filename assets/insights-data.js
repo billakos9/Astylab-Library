@@ -835,5 +835,99 @@ const INSIGHTS = [
       { name: "Heeley Trust", url: "https://heeleytrust.org/", blurb: "Neighbourhood charity operating hubs, green space and skills programs." },
       { name: "The Welcome (Knutsford)", url: "https://thewelcome.org.uk/", blurb: "Community hub with food, learning and social activities reducing isolation." }
     ]
+  },
+  {
+    id: "fragility-fractures-greece-1b-cost-100k-2034-120k",
+    slug: "fragility-fractures-greece-1b-cost-100k-2034-120k",
+    title: "Fragility fractures cost ~€1B/yr in Greece; ~100k cases now, >120k by 2034",
+    sdg: 3,
+    sdgs: [3, 10],
+    tags: ["Fragility Fractures","Health Economics","Greece"],
+    excerpt: "Greece records ~100k fragility-fracture cases/yr in 60+; projection >120k by 2034. Highest relative cost in EU (~€1B/yr) and higher mortality vs EU average—linked to gaps in post‑op support.",
+    link: "https://www.kathimerini.gr/society/563243389/ena-dis-eyro-stoichizoyn-sto-esy-ta-katagmata/",
+    sources: [
+      "https://www.kathimerini.gr/society/563243389/ena-dis-eyro-stoichizoyn-sto-esy-ta-katagmata/",
+      "https://www.kathimerini.gr/society/563239285/enischysi-tis-dexamenis-prosopikon-giatron/",
+      "https://ffngr.eu/"
+    ],
+    companies: [
+      { name: "IOF – Capture the Fracture®", url: "https://www.capturethefracture.org/", blurb: "Global FLS framework to coordinate post‑fracture care and prevent secondary fractures." },
+      { name: "Royal Osteoporosis Society – FLS", url: "https://theros.org.uk/information-and-support/fragility-fractures/fracture-liaison-services-fls/", blurb: "UK guidance & accreditation for high‑quality Fracture Liaison Services." },
+      { name: "Geriatric Orthopaedic Surgery & Rehab Pathways", url: "https://www.aaos.org/quality/quality-programs/quality-toolkits/hip-fracture/", blurb: "Toolkits and pathways to improve outcomes and reduce readmissions after hip fracture." }
+    ]
+  },
+  {
+    id: "post-hip-fracture-functional-decline-1y-greece",
+    slug: "post-hip-fracture-functional-decline-1y-greece",
+    title: "After hip fracture: 40% not walking independently at 1y; 60% struggle with ADLs",
+    sdg: 3,
+    sdgs: [3, 11],
+    tags: ["Orthogeriatrics","Rehabilitation","Greece"],
+    excerpt: "Large functional drop persists a year after surgery without integrated orthogeriatric care (mobility, ADLs, home safety, nutrition, balance training).",
+    link: "https://www.kathimerini.gr/society/563243389/ena-dis-eyro-stoichizoyn-sto-esy-ta-katagmata/",
+    sources: [
+      "https://www.kathimerini.gr/society/563243389/ena-dis-eyro-stoichizoyn-sto-esy-ta-katagmata/",
+      "https://ffngr.eu/"
+    ],
+    companies: [
+      { name: "Physitrack", url: "https://www.physitrack.com/", blurb: "Home exercise prescription, tele‑rehab and outcomes tracking for MSK & post‑op care." },
+      { name: "SWORD Health", url: "https://swordhealth.com/", blurb: "Digital physical therapy with sensors & clinicians for faster recovery at home." },
+      { name: "Kaia Health", url: "https://kaiahealth.com/", blurb: "App‑based MSK therapy programs with coach support and adherence analytics." }
+    ]
+  },
+  {
+    id: "ffn-greece-registry-2000-and-national-plan",
+    slug: "ffn-greece-registry-2000-and-national-plan",
+    title: "FFN Greece built a 2,000‑patient fracture registry; calls for national plan",
+    sdg: 16,
+    sdgs: [16, 3],
+    tags: ["Registry","Governance","Quality Improvement","Greece"],
+    excerpt: "The national fragility‑fracture network (FFN Greece) runs a registry (~2k patients) to inform policy; proposes a cross‑party expert committee for a long‑horizon plan.",
+    link: "https://ffngr.eu/",
+    sources: [
+      "https://ffngr.eu/",
+      "https://www.kathimerini.gr/society/563243389/ena-dis-eyro-stoichizoyn-sto-esy-ta-katagmata/"
+    ],
+    companies: [
+      { name: "Castor EDC", url: "https://www.castoredc.com/", blurb: "Clinical data capture & registries with ePROs and audit trails." },
+      { name: "OpenClinica", url: "https://www.openclinica.com/", blurb: "Open‑source based platform for clinical registries and studies." },
+      { name: "IQVIA Registries", url: "https://www.iqvia.com/solutions/real-world-evidence/real-world-networks/registries", blurb: "Design and operation of national disease registries at scale." }
+    ]
+  },
+  {
+    id: "post-fracture-digital-assistant-helpline",
+    slug: "post-fracture-digital-assistant-helpline",
+    title: "Digital assistant/helpline can close post‑op gaps for patients & carers",
+    sdg: 3,
+    sdgs: [3, 9, 11],
+    tags: ["Digital Health","Navigation","Care Coordination","Greece"],
+    excerpt: "Suggested solution: a hotline/app answering common post‑op questions (stitches, anticoagulants, catheters, stairs) with visuals and reminders—feeding de‑identified insights back to clinicians.",
+    link: "https://www.kathimerini.gr/society/563243389/ena-dis-eyro-stoichizoyn-sto-esy-ta-katagmata/",
+    sources: [
+      "https://www.kathimerini.gr/society/563243389/ena-dis-eyro-stoichizoyn-sto-esy-ta-katagmata/"
+    ],
+    companies: [
+      { name: "Luscii", url: "https://luscii.com/", blurb: "Remote monitoring & guided self‑care flows used by European hospitals." },
+      { name: "Ada Health", url: "https://ada.com/", blurb: "Symptom‑assessment and triage assistant integrated with care pathways." },
+      { name: "Infermedica", url: "https://infermedica.com/", blurb: "Medical guidance API for triage, navigation and FAQs in patient apps." }
+    ]
+  },
+  {
+    id: "fear-of-falling-psychology-sarcopenia",
+    slug: "fear-of-falling-psychology-sarcopenia",
+    title: "Fear of falling → inactivity, depression & sarcopenia: tackle the psyche too",
+    sdg: 3,
+    sdgs: [3],
+    tags: ["Mental Health","Falls Prevention","Rehabilitation","Greece"],
+    excerpt: "After a painful fracture, fear can escalate into a phobia—reducing autonomy and activity. Rehab must pair balance/exercise with confidence‑building and social re‑entry (even a walk for coffee).",
+    link: "https://www.kathimerini.gr/society/563243389/ena-dis-eyro-stoichizoyn-sto-esy-ta-katagmata/",
+    sources: [
+      "https://www.kathimerini.gr/society/563243389/ena-dis-eyro-stoichizoyn-sto-esy-ta-katagmata/"
+    ],
+    companies: [
+      { name: "SilverCloud Health", url: "https://www.silvercloudhealth.com/", blurb: "Digital CBT programs for anxiety/depression, offered via providers & payers." },
+      { name: "Nymbl Science", url: "https://info.nymblscience.com/", blurb: "Balance training paired with confidence‑building content to reduce fall risk." },
+      { name: "ZIBRIO", url: "https://zibrio.com/", blurb: "Validated balance score device to track stability and guide training." }
+    ]
   }
 ];
