@@ -519,5 +519,163 @@ const INSIGHTS = [
       { name: "Aunt Flow", url: "https://goauntflow.com/", blurb: "Turnkey school/workplace deployments and refill supply." },
       { name: "RedLocker", url: "https://redlocker.eu/", blurb: "Scalable dispenser networks with automated restocking across Europe." }
     ]
+  },
+  {
+    id: "extreme-heat-deadliest-europe",
+    slug: "extreme-heat-deadliest-europe",
+    title: "Extreme heat is Europe’s deadliest climate hazard",
+    sdg: 13,
+    sdgs: [13, 11, 3],
+    tags: ["Heat", "Climate Risk", "Europe"],
+    excerpt: "Heat accounts for >85% of Europe’s weather-related fatalities (1981–2020); Med capitals could feel up to +15°C vs rural baseline by 2050.",
+    link: "https://doi.org/10.5281/zenodo.17243305",
+    sources: [
+      "https://doi.org/10.5281/zenodo.17243305"
+    ],
+    companies: [
+      { name: "Tomorrow.io", url: "https://www.tomorrow.io/", blurb: "Weather intelligence & heat-risk forecasting for cities." },
+      { name: "Everbridge", url: "https://www.everbridge.com/", blurb: "Mass-notification for citywide heat alerts and sEAPs." },
+      { name: "GAF Cool Roofs", url: "https://www.gaf.com/en-us/roofing-products/commercial-roofing/cool-roofing", blurb: "High-SRI cool roofing to lower surface temps." }
+    ]
+  },
+  {
+    id: "athens-record-heatwaves-2023-2024",
+    slug: "athens-record-heatwaves-2023-2024",
+    title: "Athens set new heatwave duration records in 2023 & 2024",
+    sdg: 13,
+    sdgs: [13, 3, 11],
+    tags: ["Heatwaves", "Athens", "Climate Trends"],
+    excerpt: "“Cleon” (2023) lasted 15 consecutive days; July 2024 stretched to 17 days—the longest on record in Athens.",
+    link: "https://doi.org/10.5281/zenodo.17243305",
+    sources: [
+      "https://doi.org/10.5281/zenodo.17243305"
+    ],
+    companies: [
+      { name: "Vaisala", url: "https://www.vaisala.com/", blurb: "Professional WBGT/heat sensors for urban monitoring." },
+      { name: "IBM/The Weather Company", url: "https://www.ibm.com/weather", blurb: "City-scale forecasts & decision dashboards." }
+    ]
+  },
+  {
+    id: "hellenic-red-cross-seap",
+    slug: "hellenic-red-cross-seap",
+    title: "Early Action Protocol activates targeted heat response",
+    sdg: 3,
+    sdgs: [3, 11, 13],
+    tags: ["Preparedness", "Public Health", "Athens"],
+    excerpt: "Hellenic Red Cross sEAP triggers hydration points, outreach & comms when NOA issues high-danger heat alerts.",
+    link: "https://doi.org/10.5281/zenodo.17243305",
+    sources: [
+      "https://doi.org/10.5281/zenodo.17243305"
+    ],
+    companies: [
+      { name: "Esri", url: "https://www.esri.com/", blurb: "Hotspot mapping & resource routing for response teams." },
+      { name: "RAYVN", url: "https://rayvn.global/", blurb: "Crisis management platform for coordinated field ops." }
+    ]
+  },
+  {
+    id: "athens-heat-hotspots-western-core",
+    slug: "athens-heat-hotspots-western-core",
+    title: "Peristeri–Attiki–Metaxourgeio–Eleonas emerge as heat hotspots",
+    sdg: 11,
+    sdgs: [11, 13, 3],
+    tags: ["Urban Heat Island", "Hotspots", "Equity"],
+    excerpt: "Data layers show compounded risk where heat, air pollution and lack of green space overlap in dense districts.",
+    link: "https://doi.org/10.5281/zenodo.17243305",
+    sources: [
+      "https://doi.org/10.5281/zenodo.17243305"
+    ],
+    companies: [
+      { name: "GreenBlue Urban", url: "https://greenblue.com/", blurb: "Street-tree systems for tough urban streetscapes." },
+      { name: "Treeconomics", url: "https://www.treeconomics.co.uk/", blurb: "Urban-forest audits & ROI for cooling strategies." },
+      { name: "KOMPAN Outdoor Fitness", url: "https://www.kompan.com/", blurb: "Shade-friendly active parks with social co-benefits." }
+    ]
+  },
+  {
+    id: "imperviousness-and-forest-diversity",
+    slug: "imperviousness-and-forest-diversity",
+    title: "80% impervious cover + low tree diversity heighten heat risk",
+    sdg: 11,
+    sdgs: [11, 13, 15],
+    tags: ["Urban Greening", "Biodiversity", "Cooling"],
+    excerpt: "Athens’ urban fabric is ~80% impervious and tree species diversity is limited—raising vulnerability to heat and pests.",
+    link: "https://doi.org/10.5281/zenodo.17243305",
+    sources: [
+      "https://doi.org/10.5281/zenodo.17243305",
+      "https://minka-sdg.org/"
+    ],
+    companies: [
+      { name: "DeepRoot (Silva Cell)", url: "https://www.deeproot.com/", blurb: "Soil/Stormwater systems that keep street trees alive." },
+      { name: "Biotecture Living Walls", url: "https://www.biotecture.uk.com/", blurb: "Green walls to cool facades and boost biodiversity." }
+    ]
+  },
+  {
+    id: "athens-greening-3-30-300",
+    slug: "athens-greening-3-30-300",
+    title: "5,000 trees/year & the 3-30-300 rule guide cooling",
+    sdg: 11,
+    sdgs: [11, 13, 3],
+    tags: ["Nature-Based Solutions", "Planning", "Targets"],
+    excerpt: "Athens plans 5k trees annually to 2028 and aims for 3-30-300 access—plus micro-forests like Alepotrypa Park.",
+    link: "https://onebillionresilient.org/hadrian-aqueduct-cooling-district-heat-risk-reduction-guidelines/",
+    sources: [
+      "https://doi.org/10.5281/zenodo.17243305",
+      "https://onebillionresilient.org/hadrian-aqueduct-cooling-district-heat-risk-reduction-guidelines/"
+    ],
+    companies: [
+      { name: "SUGi Projects", url: "https://www.sugiproject.com/", blurb: "Miyawaki micro-forests for urban cooling." },
+      { name: "Land Life Company", url: "https://landlifecompany.com/", blurb: "Data-driven tree planting and aftercare." }
+    ]
+  },
+  {
+    id: "water-alignment-for-nbs",
+    slug: "water-alignment-for-nbs",
+    title: "Cooling NbS need water planning to scale",
+    sdg: 6,
+    sdgs: [6, 11, 13],
+    tags: ["Water", "NbS", "Governance"],
+    excerpt: "RBMPs and water scarcity must align with greening; water-smart design is critical for sustained cooling benefits.",
+    link: "https://doi.org/10.5281/zenodo.17243305",
+    sources: [
+      "https://doi.org/10.5281/zenodo.17243305"
+    ],
+    companies: [
+      { name: "Netafim", url: "https://www.netafim.com/", blurb: "Precision drip irrigation for urban trees/parks." },
+      { name: "Hydro International", url: "https://www.hydro-int.com/", blurb: "Stormwater capture & reuse systems." }
+    ]
+  },
+  {
+    id: "digital-twin-heat-mortality-forecast",
+    slug: "digital-twin-heat-mortality-forecast",
+    title: "Digital Twin (DT-HEAT+) forecasts heat-related mortality",
+    sdg: 13,
+    sdgs: [13, 3, 11],
+    tags: ["Digital Twin", "Forecasting", "Health"],
+    excerpt: "NOA’s DT-HEAT+ delivers next-day mortality risk forecasts; integrates with ESA’s DestinE for city planning.",
+    link: "https://doi.org/10.5281/zenodo.17243305",
+    sources: [
+      "https://doi.org/10.5281/zenodo.17243305"
+    ],
+    companies: [
+      { name: "UrbanFootprint", url: "https://urbanfootprint.com/", blurb: "Scenario modeling for heat & equity planning." },
+      { name: "Esri", url: "https://www.esri.com/", blurb: "Digital-twin geospatial stack for cities." }
+    ]
+  },
+  {
+    id: "calheatscore-equity-tool",
+    slug: "calheatscore-equity-tool",
+    title: "CalHeatScore shows equity-centred heat risk mapping",
+    sdg: 10,
+    sdgs: [10, 13, 11],
+    tags: ["Equity", "Risk Index", "Planning"],
+    excerpt: "California’s public tool blends exposure + vulnerability to target investments—transferable method for Athens & peers.",
+    link: "https://calheatscore.calepa.ca.gov/",
+    sources: [
+      "https://calheatscore.calepa.ca.gov/",
+      "https://doi.org/10.5281/zenodo.17243305"
+    ],
+    companies: [
+      { name: "Granicus – EngagementHQ", url: "https://granicus.com/product/engagementhq/", blurb: "Community input to ground heat plans in lived reality." },
+      { name: "CitizenLab", url: "https://www.citizenlab.co/", blurb: "Participatory budgeting & mapping for fair siting." }
+    ]
   }
 ];
