@@ -235,5 +235,169 @@ const INSIGHTS = [
       { name: "EIT Health – Falls/Frailty Projects", url: "https://eithealth.eu/product-service/ffalls-predictor/", blurb: "EU innovation network scaling collaborative falls‑prevention solutions." },
       { name: "Aging2.0", url: "https://www.aging2.com/", blurb: "Global network connecting senior‑care providers with tech startups for pilots and scaling." }
     ]
+  },
+  {
+    id: "low-trust-low-participation-greece",
+    slug: "low-trust-low-participation-greece",
+    title: "Low trust & weak participation undermine local governance",
+    sdg: 16,
+    sdgs: [16, 11],
+    tags: ["Governance","Participation","Greece"],
+    excerpt: "Greece struggles with low trust in institutions and limited citizen participation, which weakens local policy-making and delivery.",
+    link: "https://www.oecd.org/gov/trust-in-government-white-paper.htm",
+    sources: [
+      "https://www.oecd.org/gov/trust-in-government-white-paper.htm",
+      "https://www.opengovpartnership.org/members/athens-greece/commitments/AT0169/",
+      "https://europa.eu/eurobarometer/surveys/detail/2423"
+    ],
+    companies: [
+      { name: "CitizenLab", url: "https://www.citizenlab.co/", blurb: "Digital democracy platform used by 300+ governments to crowdsource input and co-create policy." },
+      { name: "Granicus – EngagementHQ", url: "https://granicus.com/product/engagementhq/", blurb: "End‑to‑end online engagement suite (surveys, forums, mapping, analytics)." },
+      { name: "Decidim", url: "https://decidim.org/", blurb: "Open‑source participation platform powering Barcelona’s participatory processes." },
+      { name: "Pol.is", url: "https://pol.is/", blurb: "Real‑time large‑scale opinion mapping to discover consensus and surface divisions." },
+      { name: "Crowdpolicy (GR)", url: "https://www.crowdpolicy.com/en/", blurb: "Greek civic‑tech & open‑innovation integrator for public participation and services." }
+    ]
+  },
+  {
+    id: "neighborhood-civic-hubs-boost-participation",
+    slug: "neighborhood-civic-hubs-boost-participation",
+    title: "Neighborhood civic hubs increase participation & cohesion",
+    sdg: 11,
+    sdgs: [11, 16, 3],
+    tags: ["Community Hubs","Participation","Greece"],
+    excerpt: "Local hubs that host activities, making, and mutual aid (e.g., SynAthina, Domatia Geitonias) bring residents together and build trust.",
+    link: "https://www.synathina.gr/",
+    sources: [
+      "https://www.synathina.gr/",
+      "https://thessaloniki.gr/city/neighborhood-room/",
+      "https://www.weareeveryone.org/",
+      "https://imaginethecity.gr/"
+    ],
+    companies: [
+      { name: "Participatory City Foundation (Everyone, Everyday)", url: "https://www.weareeveryone.org/", blurb: "Neighborhood‑scale participatory ecology with making, sharing and help‑to‑learn projects." },
+      { name: "Impact Hub Athens", url: "https://athens.impacthub.net/?lang=en", blurb: "Community & programs that incubate social innovation and local initiatives." },
+      { name: "Fab Lab Barcelona (IAAC)", url: "https://fablabbcn.org/", blurb: "Makerspace and urban innovation lab enabling community making & circular projects." }
+    ]
+  },
+  {
+    id: "library-of-things-reduces-consumption",
+    slug: "library-of-things-reduces-consumption",
+    title: "Libraries of Things cut waste & costs through sharing",
+    sdg: 12,
+    sdgs: [12, 11],
+    tags: ["Circular Economy","Sharing","Community"],
+    excerpt: "Tool & item‑lending libraries let residents borrow instead of buy, reducing material consumption and building skills.",
+    link: "https://www.libraryofthings.co.uk/",
+    sources: [
+      "https://www.libraryofthings.co.uk/",
+      "https://torontotoollibrary.com/",
+      "https://www.thethingery.com/",
+      "https://www.shareshed.org.uk/"
+    ],
+    companies: [
+      { name: "Library of Things (UK)", url: "https://www.libraryofthings.co.uk/", blurb: "Neighborhood rental lockers for appliances & tools with repair training." },
+      { name: "Toronto Tool Library", url: "https://torontotoollibrary.com/", blurb: "Membership‑based tool lending and makerspace with workshops." },
+      { name: "The Thingery (CA)", url: "https://www.thethingery.com/", blurb: "Cargo‑container lending libraries for neighborhoods across Vancouver." },
+      { name: "Share Shed (UK)", url: "https://www.shareshed.org.uk/", blurb: "Mobile ‘library of things’ reducing waste and cost in rural communities." }
+    ]
+  },
+  {
+    id: "community-owned-cafe-funds-projects",
+    slug: "community-owned-cafe-funds-projects",
+    title: "Community‑owned businesses can fund city projects",
+    sdg: 11,
+    sdgs: [11, 17, 8],
+    tags: ["Social Enterprise","Civic Funding","Case Study"],
+    excerpt: "Urban Space 100 dedicates 80% of profits to local initiatives—an exportable model for community wealth building.",
+    link: "https://urbanspace.if.ua/en",
+    sources: [
+      "https://urbanspace.if.ua/en",
+      "https://urbanspaceradio.com/"
+    ],
+    companies: [
+      { name: "Urban Space 100 (Ivano‑Frankivsk)", url: "https://urbanspace.if.ua/en", blurb: "Community‑owned restaurant that grants profits to civic projects." },
+      { name: "Urban Space Radio", url: "https://urbanspaceradio.com/", blurb: "Sister social enterprise amplifying urbanism & community stories." },
+      { name: "Impact Hub Network", url: "https://impacthub.net/", blurb: "Global network supporting social enterprise models and place‑based impact." }
+    ]
+  },
+  {
+    id: "civic-journalism-documenters-accountability",
+    slug: "civic-journalism-documenters-accountability",
+    title: "Civic journalism & Documenters improve accountability",
+    sdg: 16,
+    sdgs: [16, 11],
+    tags: ["Transparency","Media","Participation"],
+    excerpt: "Training residents to cover public meetings (City Bureau’s Documenters) builds a new public record and strengthens oversight.",
+    link: "https://www.citybureau.org/",
+    sources: [
+      "https://www.citybureau.org/",
+      "https://www.documenters.org/"
+    ],
+    companies: [
+      { name: "City Bureau", url: "https://www.citybureau.org/", blurb: "Nonprofit civic media lab; operates the Documenters Network in 20+ communities." },
+      { name: "Documenters.org", url: "https://www.documenters.org/", blurb: "Platform to train and pay locals to document public meetings and share notes." },
+      { name: "Hearken", url: "https://www.wearehearken.com/", blurb: "Engagement platform for audience‑powered journalism and public agencies." }
+    ]
+  },
+  {
+    id: "cdcs-revitalize-neighborhoods",
+    slug: "cdcs-revitalize-neighborhoods",
+    title: "Community Development Corporations revive neighborhoods",
+    sdg: 11,
+    sdgs: [11, 8, 10],
+    tags: ["Affordable Housing","Inclusive Growth","Policy"],
+    excerpt: "CDCs combine housing, business support, and public‑space improvements—backed by intermediaries like LISC and NeighborWorks.",
+    link: "https://www.lisc.org/",
+    sources: [
+      "https://www.lisc.org/",
+      "https://www.neighborworks.org/",
+      "https://www.enterprisecommunity.org/"
+    ],
+    companies: [
+      { name: "LISC", url: "https://www.lisc.org/", blurb: "National intermediary financing inclusive development and CDCs." },
+      { name: "NeighborWorks America", url: "https://www.neighborworks.org/", blurb: "Network supporting 240+ community groups with training and capital." },
+      { name: "Enterprise Community Partners", url: "https://www.enterprisecommunity.org/", blurb: "Nonprofit deploying capital and policy to expand affordable housing." }
+    ]
+  },
+  {
+    id: "anti-speculative-ownership-keeps-spaces-affordable",
+    slug: "anti-speculative-ownership-keeps-spaces-affordable",
+    title: "Anti‑speculative ownership keeps civic spaces affordable",
+    sdg: 11,
+    sdgs: [11, 8],
+    tags: ["Property Models","Affordability","Berlin"],
+    excerpt: "ExRotaprint uses land trusts and long leases with foundations to take property off the speculative market and preserve low rents.",
+    link: "https://www.exrotaprint.de/en/",
+    sources: [
+      "https://www.exrotaprint.de/en/",
+      "https://maryon.ch/en/",
+      "https://www.stiftung-trias.de/english/"
+    ],
+    companies: [
+      { name: "ExRotaprint gGmbH", url: "https://www.exrotaprint.de/en/", blurb: "Non‑profit real‑estate model for work, art and community with capped rents." },
+      { name: "Edith Maryon Foundation", url: "https://maryon.ch/en/", blurb: "Buys land to remove it from speculation and ensure social use." },
+      { name: "Stiftung trias", url: "https://www.stiftung-trias.de/english/", blurb: "Foundation that secures land and grants heritable building rights for social projects." }
+    ]
+  },
+  {
+    id: "greenspace-scarcity-health-burden-athens",
+    slug: "greenspace-scarcity-health-burden-athens",
+    title: "Athens’ lack of green space hurts health",
+    sdg: 11,
+    sdgs: [11, 3, 13],
+    tags: ["Green Space","Health","Athens"],
+    excerpt: "Studies rank Athens among European capitals with the highest mortality burden from scarce urban green space; per‑capita green is ~6.6 m².",
+    link: "https://www.lse.ac.uk/Cities/Assets/Documents/Urban-Age/Athens-Urban-Age-Task-Force-Spatial-Compendium.pdf",
+    sources: [
+      "https://www.lse.ac.uk/Cities/Assets/Documents/Urban-Age/Athens-Urban-Age-Task-Force-Spatial-Compendium.pdf",
+      "https://www.thelancet.com/journals/landig/article/PIIS2542-5196(21)00229-1/fulltext",
+      "https://gogreenroutes.eu/fileadmin/user_upload/Resources/Green_space_and_mortality_in_European_cities.pdf"
+    ],
+    companies: [
+      { name: "Green City Solutions", url: "https://greencitysolutions.de/", blurb: "CityTree moss biofilters and urban greening systems for air quality & cooling." },
+      { name: "Biotecture Living Walls", url: "https://www.biotecture.uk.com/", blurb: "Modular green wall systems for buildings and public realm." },
+      { name: "Land Life Company", url: "https://landlifecompany.com/", blurb: "Reforestation & urban tree‑planting using data‑driven methods." },
+      { name: "KOMPAN Parks & Play", url: "https://www.kompan.com/", blurb: "Active‑aging friendly parks & outdoor fitness equipment for healthier cities." }
+    ]
   }
 ];
