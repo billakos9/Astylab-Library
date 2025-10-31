@@ -399,5 +399,125 @@ const INSIGHTS = [
       { name: "Land Life Company", url: "https://landlifecompany.com/", blurb: "Reforestation & urban tree‑planting using data‑driven methods." },
       { name: "KOMPAN Parks & Play", url: "https://www.kompan.com/", blurb: "Active‑aging friendly parks & outdoor fitness equipment for healthier cities." }
     ]
+  },
+  {
+    id: "menstrual-health-sdg-6-2",
+    slug: "menstrual-health-sdg-6-2",
+    title: "Menstrual health is integral to SDG 6.2—and links to education & equality",
+    sdg: 6,
+    sdgs: [6, 4, 5, 3, 12],
+    tags: ["Menstrual Health","SDGs","Global"],
+    excerpt: "SDG 6.2 calls for adequate sanitation & hygiene with attention to the needs of women and girls; menstrual health also impacts learning (SDG4), equality (SDG5), health (SDG3) and consumption (SDG12).",
+    link: "https://washdata.org/topics/menstrual-health",
+    sources: [
+      "https://washdata.org/topics/menstrual-health",
+      "https://www.unicef.org/media/91341/file/UNICEF-Guidance-menstrual-health-hygiene-2019.pdf"
+    ],
+    companies: [
+      { name: "Days for Girls International", url: "https://www.daysforgirls.org/", blurb: "Global nonprofit pairing washable pads with culturally relevant menstrual health education." },
+      { name: "Plan International", url: "https://plan-uk.org/our-work/health-and-rights/periods", blurb: "Programs to end period poverty, stigma and taboos in schools and communities." },
+      { name: "Bloody Good Period", url: "https://www.bloodygoodperiod.com/", blurb: "UK charity providing products and menstrual education for those least likely to access it." }
+    ]
+  },
+  {
+    id: "period-poverty-absenteeism-greece",
+    slug: "period-poverty-absenteeism-greece",
+    title: "Period poverty drives school absenteeism & inequality in Greece",
+    sdg: 4,
+    sdgs: [4, 5, 10, 3, 6],
+    tags: ["Period Poverty","Education","Greece"],
+    excerpt: ">10k girls miss school monthly due to unaffordable products; some risk up to 30 absence days/year—an education and equity issue.",
+    link: "https://www.thenationalherald.com/greece-will-help-women-girls-who-cant-afford-menstrual-product-costs/",
+    sources: [
+      "https://www.thenationalherald.com/greece-will-help-women-girls-who-cant-afford-menstrual-product-costs/",
+      "https://balkaninsight.com/2024/03/01/greece-presents-plan-to-tackle-period-poverty-among-women/",
+      "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52019IP0014"
+    ],
+    companies: [
+      { name: "Hey Girls (UK)", url: "https://www.heygirls.co.uk/", blurb: "Buy‑one‑give‑one social enterprise donating period products and delivering education." },
+      { name: "Aunt Flow", url: "https://goauntflow.com/", blurb: "Free‑vend pads & tampon dispensers for schools, campuses and workplaces." },
+      { name: "Riley", url: "https://www.energiagroup.com/news-media/riley", blurb: "Corporate programs supplying free organic products in offices (e.g., Energia Group)." },
+      { name: "Bloody Good Period", url: "https://www.bloodygoodperiod.com/", blurb: "Menstrual equity programs & education for marginalized communities." }
+    ]
+  },
+  {
+    id: "free-period-dispensers-schools-workplaces",
+    slug: "free-period-dispensers-schools-workplaces",
+    title: "Free product dispensers in schools & workplaces improve dignity and participation",
+    sdg: 6,
+    sdgs: [6, 4, 5, 10],
+    tags: ["Access","Dispensers","Facilities"],
+    excerpt: "86% start periods unexpectedly in public; accessible dispensers reduce panic, stigma, and lost time at school or work.",
+    link: "https://www.freethetampons.org/",
+    sources: [
+      "https://www.freethetampons.org/",
+      "https://redlocker.eu/",
+      "https://organicmondays.com/collections/dispensers",
+      "https://www.cws.com/en/hygiene/products/toilet-hygiene/tampon-pad-dispenser"
+    ],
+    companies: [
+      { name: "Aunt Flow", url: "https://goauntflow.com/", blurb: "Modern free‑vend dispensers; ADA‑compliant; widely used in schools and campuses." },
+      { name: "RedLocker", url: "https://redlocker.eu/", blurb: "Battery‑powered dispensers with anti‑waste delay; installed in 4k+ European locations." },
+      { name: "Mondays (Organic Mondays)", url: "https://organicmondays.com/", blurb: "EU provider of sustainable products & dispensers for workplaces, schools and venues." },
+      { name: "CWS Hygiene", url: "https://www.cws.com/en/hygiene/products/toilet-hygiene/tampon-pad-dispenser", blurb: "Free‑dispense tampon/pad units for public washrooms with service & refill options." }
+    ]
+  },
+  {
+    id: "chemicals-in-period-products-health-risks",
+    slug: "chemicals-in-period-products-health-risks",
+    title: "Conventional period products may contain plastics & toxic metals—transparency gap persists",
+    sdg: 3,
+    sdgs: [3, 12],
+    tags: ["Product Safety","Chemicals","Health"],
+    excerpt: "2024 research found lead, arsenic and other metals in tampons from major brands; labeling rules often don’t require full ingredient disclosure.",
+    link: "https://publichealth.berkeley.edu/articles/spotlight/research/first-study-to-measure-toxic-metals-in-tampons-shows-arsenic-and-lead",
+    sources: [
+      "https://publichealth.berkeley.edu/articles/spotlight/research/first-study-to-measure-toxic-metals-in-tampons-shows-arsenic-and-lead",
+      "https://www.sciencedirect.com/science/article/pii/S0160412024004355",
+      "https://www.niehs.nih.gov/news/factor/2024/8/feature/3-feature-metals-in-tampons"
+    ],
+    companies: [
+      { name: "August", url: "https://www.itsaugust.co/", blurb: "Organic cotton pads & tampons; transparency‑focused brand challenging ‘tampon tax’." },
+      { name: "LOLA", url: "https://mylola.com/", blurb: "Clearly labeled period care made without synthetic fibers, fragrance or dyes." },
+      { name: "Freda", url: "https://www.myfreda.com/", blurb: "EU brand emphasizing organic materials and reduced‑plastic packaging." }
+    ]
+  },
+  {
+    id: "menstrual-products-environmental-footprint",
+    slug: "menstrual-products-environmental-footprint",
+    title: "Disposable period products create plastic waste & CO₂—reusables cut impact",
+    sdg: 12,
+    sdgs: [12, 13, 14],
+    tags: ["Circularity","Waste","Climate"],
+    excerpt: "Period products rank among common freshwater plastics; meta‑analyses show reusables (cups, underwear, pads) reduce waste and lifetime footprint.",
+    link: "https://earthwatch.org.uk/top-10/",
+    sources: [
+      "https://earthwatch.org.uk/top-10/",
+      "https://www.lifecycleinitiative.org/wp-content/uploads/2021/07/UNEP-LCI-Single-use-vs-reusable-Menstrual-Products-Meta-study.pdf"
+    ],
+    companies: [
+      { name: "AllMatters (OrganiCup)", url: "https://allmatters.com/en-eu", blurb: "Reusable cups/discs & period underwear; programs with NGOs for period equity." },
+      { name: "Saalt", url: "https://saalt.com/", blurb: "Reusable cups, discs and leak‑proof underwear to replace disposables." },
+      { name: "Aisle (formerly Lunapads)", url: "https://periodaisle.com/", blurb: "Reusable pads & underwear; early pioneer in modern reusables." }
+    ]
+  },
+  {
+    id: "greece-period-poverty-program-2024",
+    slug: "greece-period-poverty-program-2024",
+    title: "Greece’s Period Poverty Programme supplies 14M products to 200 schools + education & destigmatization",
+    sdg: 5,
+    sdgs: [5, 4, 3, 6, 10],
+    tags: ["Policy","Greece","RRF"],
+    excerpt: "National program (RRF‑funded) targets West Attica & West Thessaloniki with free products, parent education and stigma‑reduction campaigns.",
+    link: "https://balkaninsight.com/2024/03/01/greece-presents-plan-to-tackle-period-poverty-among-women/",
+    sources: [
+      "https://balkaninsight.com/2024/03/01/greece-presents-plan-to-tackle-period-poverty-among-women/",
+      "https://www.thenationalherald.com/greece-will-help-women-girls-who-cant-afford-menstrual-product-costs/"
+    ],
+    companies: [
+      { name: "Herbox", url: "https://www.herbox.se/en/", blurb: "European free‑vend dispensers with timed lock to prevent waste; used in schools & offices." },
+      { name: "Aunt Flow", url: "https://goauntflow.com/", blurb: "Turnkey school/workplace deployments and refill supply." },
+      { name: "RedLocker", url: "https://redlocker.eu/", blurb: "Scalable dispenser networks with automated restocking across Europe." }
+    ]
   }
 ];
