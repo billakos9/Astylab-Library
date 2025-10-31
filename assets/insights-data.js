@@ -757,5 +757,83 @@ const INSIGHTS = [
       { name: "Rock Solid (CitySourced)", url: "https://www.rocksolid.com/", blurb: "Mobile issue reporting and constituent experience suite for 311/CRM." },
       { name: "QScend 311 CRM", url: "https://www.qscend.com/", blurb: "Citizen request management platform powering 311 services in US municipalities." }
     ]
+  },
+  {
+    id: "hubs-income-streams-and-size-delta",
+    slug: "hubs-income-streams-and-size-delta",
+    title: "Space hire is #1 income; micro hubs −38% income (2013–18) while large hubs +34%",
+    sdg: 11,
+    sdgs: [11, 8, 16],
+    tags: ["Community Hubs","Finance","Resilience","UK"],
+    excerpt: "Across 120+ hubs, the most common income sources were meeting-room/hall hire, grants and workspace rental; overall income rose 6% vs 11% inflation, with micro hubs shrinking and larger hubs growing.",
+    link: "https://localtrust.org.uk/",
+    sources: [
+      "Community hubs: Understanding survival and success — Local Trust & Power to Change (2019)",
+      "https://localtrust.org.uk/",
+      "https://www.powertochange.org.uk/"
+    ],
+    companies: [
+      { name: "Locality (UK)", url: "https://locality.org.uk/", blurb: "Network supporting community assets, business models and governance." },
+      { name: "Spacehive", url: "https://www.spacehive.com/", blurb: "Civic crowdfunding platform to finance hub fit‑outs and programs." },
+      { name: "Community Shares Unit", url: "https://communityshares.org.uk/", blurb: "Guidance on community investment via shares for local assets." },
+      { name: "Meanwhile Space CIC", url: "https://www.meanwhilespace.com/", blurb: "Activates vacant properties as affordable community/enterprise space." }
+    ]
+  },
+  {
+    id: "hubs-cost-structure-staff-and-buildings",
+    slug: "hubs-cost-structure-staff-and-buildings",
+    title: "Staff ≈45% of income; buildings add 20–40% — squeezing margins",
+    sdg: 11,
+    sdgs: [11, 8],
+    tags: ["Costs","Staffing","Buildings","UK"],
+    excerpt: "Across hubs, staff costs average ~45% of income; property costs (rent, utilities, maintenance, compliance) often add 20–40%, leaving thin surpluses unless income is diversified.",
+    link: "https://localtrust.org.uk/",
+    sources: [
+      "Community hubs: Understanding survival and success — cost structure sections",
+      "https://localtrust.org.uk/"
+    ],
+    companies: [
+      { name: "Community Energy England", url: "https://communityenergyengland.org/", blurb: "Supports solar/energy projects to cut building running costs." },
+      { name: "Big Solar Co‑op", url: "https://bigsolar.coop/", blurb: "Community‑owned solar to reduce utility bills on civic buildings." },
+      { name: "Salix Finance", url: "https://www.salixfinance.co.uk/", blurb: "UK public funding for energy efficiency and decarbonisation upgrades." }
+    ]
+  },
+  {
+    id: "hubs-governance-and-financial-discipline",
+    slug: "hubs-governance-and-financial-discipline",
+    title: "Strong boards, cashflow discipline & scenario planning prevent crises",
+    sdg: 16,
+    sdgs: [16, 11],
+    tags: ["Governance","Finance","Risk","UK"],
+    excerpt: "Common pitfalls include weak boards, unclear reporting and over‑reliance on grants; resilience strategies include board development, clear management accounts/cashflow forecasts and scenario planning.",
+    link: "https://powertochange.org.uk/",
+    sources: [
+      "Community hubs: Understanding survival and success — governance & risk appendices",
+      "https://powertochange.org.uk/"
+    ],
+    companies: [
+      { name: "Locality (UK)", url: "https://locality.org.uk/", blurb: "Governance reviews, asset transfer and financial planning support." },
+      { name: "NCVO", url: "https://www.ncvo.org.uk/", blurb: "Board development and charity governance resources." },
+      { name: "Charity Finance Group (CFG)", url: "https://cfg.org.uk/", blurb: "Training on management accounts, reserves and cashflow." }
+    ]
+  },
+  {
+    id: "hubs-improve-health-and-reduce-isolation",
+    slug: "hubs-improve-health-and-reduce-isolation",
+    title: "Community hubs can improve health & reduce isolation",
+    sdg: 3,
+    sdgs: [3, 11, 16],
+    tags: ["Health","Inclusion","Evaluation","UK"],
+    excerpt: "Evaluations of hub consortia report improved physical/mental health and decreased isolation when services are coordinated around local needs.",
+    link: "https://localtrust.org.uk/",
+    sources: [
+      "Community hubs: Understanding survival and success — case study evaluations",
+      "https://localtrust.org.uk/"
+    ],
+    companies: [
+      { name: "Colindale Communities Trust", url: "https://www.colindalecommunity.org/", blurb: "North London hub consortium reporting improved health & cohesion." },
+      { name: "Heeley Trust", url: "https://heeleytrust.org/", blurb: "Neighbourhood charity operating hubs, green space and skills programs." },
+      { name: "The Welcome (Knutsford)", url: "https://thewelcome.org.uk/", blurb: "Community hub with food, learning and social activities reducing isolation." }
+    ]
   }
 ];
