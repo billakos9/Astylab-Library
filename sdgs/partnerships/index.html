@@ -32,7 +32,7 @@
 function tagHTML(tags){return (tags||[]).map(t=>`<span class="tag">${t}</span>`).join('');}
 function render(list){
   const grid=document.getElementById('insightGrid');
-  if(!list.length){ grid.innerHTML = '<p class="kicker">No insights yet for this SDG. Add some in assets/insights-data.js (set sdg: 17).</p>'; return; }
+  if(!list.length){ grid.innerHTML = '<p class="kicker">No insights yet for this SDG.</p>'; return; }
   grid.innerHTML=list.map(i=>{
     const insightLink = i.id ? `/insight.html?id=${i.id}` : (i.link || '/data.html');
     return `
