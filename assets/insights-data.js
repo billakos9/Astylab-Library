@@ -929,5 +929,136 @@ const INSIGHTS = [
       { name: "Nymbl Science", url: "https://info.nymblscience.com/", blurb: "Balance training paired with confidence‑building content to reduce fall risk." },
       { name: "ZIBRIO", url: "https://zibrio.com/", blurb: "Validated balance score device to track stability and guide training." }
     ]
+  },
+  {
+    id: "mental-health-half-world-lifetime",
+    slug: "mental-health-half-world-lifetime",
+    title: "Half of the world will experience a mental health disorder in their lifetime",
+    sdg: 3,
+    sdgs: [3, 10],
+    tags: ["Global","Epidemiology","Lifetime risk"],
+    excerpt: "Large-scale studies show ~1 in 2 people will develop a mental health disorder at some point—underscoring the need for scaled access and anti‑stigma action.",
+    link: "https://hms.harvard.edu/news/half-worlds-population-will-experience-mental-health-disorder",
+    sources: [
+      "https://hms.harvard.edu/news/half-worlds-population-will-experience-mental-health-disorder",
+      "https://www.projecthope.org/news-stories/story/the-global-mental-health-crisis-10-numbers-to-note/"
+    ],
+    companies: [
+      { name: "Kooth", url: "https://investors.kooth.com/", blurb: "Digital mental health support for young people and adults via health systems and employers." },
+      { name: "Headspace Health (Ginger)", url: "https://www.headspace.com/health", blurb: "On‑demand coaching and therapy at scale via payers and employers." },
+      { name: "Togetherall", url: "https://www.togetherall.com/", blurb: "Peer‑to‑peer moderated mental health community used by universities & cities." }
+    ]
+  },
+  {
+    id: "who-europe-2025-critical-stats",
+    slug: "who-europe-2025-critical-stats",
+    title: "WHO Europe 2025: 1 in 6 with a condition; 1 in 3 untreated; 120k suicides/yr",
+    sdg: 3,
+    sdgs: [3, 10],
+    tags: ["Europe","Access Gap","Suicide"],
+    excerpt: "In the WHO European Region, 1 in 6 lives with a condition; 1 in 3 lacks needed care; >120,000 die by suicide annually; suicide is the leading cause of death among 15–29‑year‑olds.",
+    link: "https://www.who.int/news/item/02-09-2025-over-a-billion-people-living-with-mental-health-conditions-services-require-urgent-scale-up",
+    sources: [
+      "https://www.who.int/news/item/02-09-2025-over-a-billion-people-living-with-mental-health-conditions-services-require-urgent-scale-up"
+    ],
+    companies: [
+      { name: "Samaritans", url: "https://www.samaritans.org/", blurb: "24/7 suicide prevention helpline and outreach across the UK & Ireland." },
+      { name: "Crisis Text Line", url: "https://www.crisistextline.org/", blurb: "Free, 24/7 text‑based crisis support; partnerships with schools and platforms." },
+      { name: "StrongMinds", url: "https://strongminds.org/", blurb: "Community Group IPT therapy at scale for depression in low‑resource settings." }
+    ]
+  },
+  {
+    id: "eu-2023-46pc-psychosocial-symptoms",
+    slug: "eu-2023-46pc-psychosocial-symptoms",
+    title: "EU 2023: 46% experienced emotional or psychosocial problems in past year",
+    sdg: 3,
+    sdgs: [3, 10],
+    tags: ["EU","Anxiety & Depression","Awareness"],
+    excerpt: "Nearly 1 in 2 people in the EU reported issues like anxiety or depression in the 12 months to June 2023—highlighting demand for timely, community‑based care.",
+    link: "https://commission.europa.eu/news-and-media/news/recognising-importance-mental-health-work-world-mental-health-day-2024-10-10_el",
+    sources: [
+      "https://commission.europa.eu/news-and-media/news/recognising-importance-mental-health-work-world-mental-health-day-2024-10-10_el"
+    ],
+    companies: [
+      { name: "SilverCloud by Amwell", url: "https://www.amwell.com/solutions/silvercloud/", blurb: "Evidence‑based digital programmes for anxiety & depression via health systems." },
+      { name: "Ieso", url: "https://www.iesohealth.com/", blurb: "AI‑supported, therapist‑delivered CBT with outcomes tracking." },
+      { name: "Mind (UK)", url: "https://www.mind.org.uk/", blurb: "Charity offering information, advocacy and local services across England & Wales." }
+    ]
+  },
+  {
+    id: "greece-stigma-decline-1-in-6-diagnosed",
+    slug: "greece-stigma-decline-1-in-6-diagnosed",
+    title: "Greece: Stigma fell (63%→36%) but 1 in 6 lives with a diagnosis; unmet need high",
+    sdg: 3,
+    sdgs: [3, 10],
+    tags: ["Greece","Stigma","Unmet Need"],
+    excerpt: "Agreement that ‘depression is a sign of weakness’ dropped from 63.1% (2009) to 36% (2014), yet 1 in 6 lives with a diagnosed disorder and unmet mental‑health needs remain substantial.",
+    link: "https://health.ec.europa.eu/document/download/2ecb6bdf-19f7-40eb-b521-5952d03e8c95_en?filename=2023_chp_gr_greek.pdf&prefLang=el",
+    sources: [
+      "https://health.ec.europa.eu/document/download/2ecb6bdf-19f7-40eb-b521-5952d03e8c95_en?filename=2023_chp_gr_greek.pdf&prefLang=el"
+    ],
+    companies: [
+      { name: "ANTILIPSI (Εταιρεία Ψυχικής Υγείας) — παράδειγμα προγραμμάτων αποστιγματοποίησης", url: "https://www.antilipsi.gr/", blurb: "Ενημέρωση/πρόληψη και υπηρεσίες ψυχικής υγείας στην κοινότητα." },
+      { name: "MHFA Greece (Mental Health First Aid)", url: "https://www.mhfa.gr/", blurb: "Εκπαίδευση πρώτων βοηθειών ψυχικής υγείας σε πολίτες & επαγγελματίες." },
+      { name: "Togetherall", url: "https://www.togetherall.com/", blurb: "Ανώνυμη, εποπτευόμενη peer‑to‑peer κοινότητα για φοιτητές/πόλεις." }
+    ]
+  },
+  {
+    id: "loneliness-health-brain-youth-older",
+    slug: "loneliness-health-brain-youth-older",
+    title: "Loneliness harms brain & health; affects teens and older adults disproportionately",
+    sdg: 3,
+    sdgs: [3, 10, 11],
+    tags: ["Loneliness","Youth","Older Adults","Brain"],
+    excerpt: "A quarter of 15‑year‑old girls report being lonely most/all the time; 1 in 4 older adults 60+ report loneliness. Loneliness alters stress/attention networks and raises risks across health outcomes.",
+    link: "https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf",
+    sources: [
+      "https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf",
+      "https://joint-research-centre.ec.europa.eu/projects-and-activities/survey-methods-and-analysis-centre/loneliness/defining-loneliness_en",
+      "https://journals.sagepub.com/doi/full/10.1177/00207640241303029"
+    ],
+    companies: [
+      { name: "Campaign to End Loneliness (UK)", url: "https://www.campaigntoendloneliness.org/", blurb: "Evidence hub & partnerships to reduce loneliness at community scale." },
+      { name: "Befriending Networks", url: "https://www.befriending.co.uk/", blurb: "Standards and network for befriending services supporting older people." },
+      { name: "Meetup", url: "https://www.meetup.com/", blurb: "Platform for in‑person interest groups that build local social ties." }
+    ]
+  },
+  {
+    id: "community-based-care-works",
+    slug: "community-based-care-works",
+    title: "Community‑based mental health care reduces stigma and brings care closer",
+    sdg: 3,
+    sdgs: [3, 11, 16],
+    tags: ["Community Care","Integrated Care","Peer Support"],
+    excerpt: "WHO calls for strengthening community‑based services embedded in primary care, peer support and hubs—improving access, dignity and recovery.",
+    link: "https://www.who.int/news-room/feature-stories/detail/sparking-a-renaissance-in-mental-health--strengthening-community-based-care-for-all-in-need",
+    sources: [
+      "https://www.who.int/news-room/feature-stories/detail/sparking-a-renaissance-in-mental-health--strengthening-community-based-care-for-all-in-need",
+      "https://www.who.int/news-room/commentaries/detail/from-isolation-to-inclusion---community-based-mental-health-care"
+    ],
+    companies: [
+      { name: "Friendship Bench", url: "https://www.friendshipbenchzimbabwe.org/", blurb: "Peer counsellors deliver problem‑solving therapy on community benches; replicated globally." },
+      { name: "Clubhouse International", url: "https://clubhouse-intl.org/", blurb: "Community recovery model for people with serious mental illness (work‑ordered day)." },
+      { name: "StrongMinds", url: "https://strongminds.org/", blurb: "Group IPT therapy model tackling depression at scale." }
+    ]
+  },
+  {
+    id: "mental-health-economic-costs-uk-greece",
+    slug: "mental-health-economic-costs-uk-greece",
+    title: "Mental ill‑health costs: £300B/yr in England; >3% of GDP (€5.3B) in Greece (2015)",
+    sdg: 8,
+    sdgs: [8, 3, 10],
+    tags: ["Economics","Workforce","Greece","UK"],
+    excerpt: "Costs include productivity losses (absence & presenteeism), human costs and health/social care—demanding prevention and workplace programmes.",
+    link: "https://www.centreformentalhealth.org.uk/publications/the-economic-and-social-costs-of-mental-ill-health/",
+    sources: [
+      "https://www.centreformentalhealth.org.uk/publications/the-economic-and-social-costs-of-mental-ill-health/",
+      "https://health.ec.europa.eu/document/download/2ecb6bdf-19f7-40eb-b521-5952d03e8c95_en?filename=2023_chp_gr_greek.pdf&prefLang=el"
+    ],
+    companies: [
+      { name: "Unmind", url: "https://unmind.com/", blurb: "Workplace mental health platform with measurement, content and care pathways." },
+      { name: "Lyra Health", url: "https://www.lyrahealth.com/", blurb: "Employer‑sponsored mental health care with high‑quality networks & outcomes tracking." },
+      { name: "MHFA International", url: "https://mhfa.com.au/", blurb: "Mental Health First Aid training adopted by employers and communities worldwide." }
+    ]
   }
 ];
