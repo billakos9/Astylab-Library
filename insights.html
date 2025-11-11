@@ -3,18 +3,18 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Astylab Library — Insights</title>
-  <link rel="stylesheet" href="/assets/styles.css"/>
+  <link rel="stylesheet" href="assets/styles.css"/>
 </head>
 <body>
   <div class="container headerpad">
     <nav class="nav">
       <div class="logo"><span class="badge">Astylab</span><span>Library</span></div>
       <div class="links">
-        <a href="/index.html">Home</a>
-        <a href="/sdgs.html">Browse SDGs</a>
-        <a href="/insights.html">Insights</a>
-        <a href="/data.html">Data Sources</a>
-        <a href="/about.html">About</a>
+        <a href="index.html">Home</a>
+        <a href="sdgs.html">Browse SDGs</a>
+        <a href="insights.html">Insights</a>
+        <a href="data.html">Data Sources</a>
+        <a href="about.html">About</a>
       </div>
     </nav>
   </div>
@@ -45,11 +45,11 @@
 
   <div class="container grid" id="insightGrid"></div>
 
-  <script src="/assets/insights-data.js"></script>
+  <script src="assets/insights-data.js"></script>
   <script>
     function tagHTML(tags){ return (tags||[]).map(t => `<span class="tag">${t}</span>`).join(''); }
     function card(i){
-      const insightLink = i.id ? `/insight.html?id=${i.id}` : (i.link || '/data.html');
+      const insightLink = i.id ? `insight.html?id=${i.id}` : (i.link || 'data.html');
       return `
         <section class="card half">
           <h3><a href="${insightLink}" style="color:inherit;text-decoration:none;">${i.title}</a></h3>
